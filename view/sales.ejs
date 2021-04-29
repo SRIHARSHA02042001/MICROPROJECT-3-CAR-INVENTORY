@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+<title>SALES DETAILS</title>
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+<center><h1>Car Inventory Management</h1></center>
+<ul class="m">
+<li><a href="/">Home</a></li>
+<li><a href="/add">Add New Car Details</a></li>
+<li><a href="/update">Update Car Details</a></li>
+<li><a href="/delete">Delete Car Details</a></li>
+<li><a href="/sales">Car Sales Details</a></li>
+<li><a href="/updatesales">Update Car Sales Details</a></li>
+</ul>
+<h2>Sales Details</h2>
+<center>
+<table>
+<tr>
+<th>Sales Id</th>
+<th>Car Id</th>
+<th>Purchase Date</th>
+<th>Cuurent Purchases</th>
+<th>Total Purchases</th>
+</tr>
+<% for(var i=0;i<data1.length;i++){%>
+<tr>
+<td><%= data1[i].sid%></td>
+<td><%= data1[i].car_id%></td>
+<td><%= data1[i].pdate%></td>
+<td><%= data1[i].crr_pur%></td>
+<td><%= data1[i].total_sal%></td>
+</tr>
+<% } %>
+</table>
+</center>
+</body>
+</html>

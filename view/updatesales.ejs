@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>UPDATE SALES DETAILS</title>
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+<center><h1>Car Inventory Management</h1></center>
+<ul class="m">
+<li><a href="/">Home</a></li>
+<li><a href="/add">Add New Car Details</a></li>
+<li><a href="/update">Update Car Details</a></li>
+<li><a href="/delete">Delete Car Details</a></li>
+<li><a href="/sales">Car Sales Details</a></li>
+<li><a href="/updatesales">Update Car Sales Details</a></li>
+</ul>
+<h2>Update Car Sales Details</h2>
+<form name="f2" onsubmit="return fun1()" method="post" action="/updateSalesData">
+<label>Sales Id:</label>
+<input type="text" placeholder="Enter Sales Id" name="sid1" required><br>
+<label>Purchase date:</label>
+<input type="date" placeholder="Enter date" name="pd1" required><br>
+<label>Current Sales</label>
+<input type="number" placeholder="Enter current sales" required name="cs1"><br>
+<label>Total Sales</label>
+<input type="number" placeholder="Enter total sales" required name="ts"><br>
+<input type="submit" value="update">
+</form>
+<script>
+function fun1(){
+var s=document.f2.cs1.value;
+var d=document.f2.ts.value;
+if(s<0){
+alert("Cuurent Sales cant be negative");
+return false;
+}
+else if(d<0){
+alert("Total sales cant be negative");
+return false;
+}
+return true;
+}
+</script>
+</body>
+</html>

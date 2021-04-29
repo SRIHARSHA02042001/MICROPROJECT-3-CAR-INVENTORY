@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>ADD DETAILS</title>
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+<center><h1>Car Inventory Management</h1></center>
+<ul class="m">
+<li><a href="/">Home</a></li>
+<li><a href="/add">Add New Car Details</a></li>
+<li><a href="/update">Update Car Details</a></li>
+<li><a href="/delete">Delete Car Details</a></li>
+<li><a href="/sales">Car Sales Details</a></li>
+<li><a href="/updatesales">Update Car Sales Details</a></li>
+</ul>
+<h2>Add Car Details</h2>
+<form name="f" onsubmit="return myFun()" method="post" action="/addData">
+<label>Car Id:</label>
+<input type="text" placeholder="Enter car id" id="ccid1" name="cid" required><br>
+<label>Car Brand:</label>
+<input type="text" placeholder="Enter car brand" name="cb" required><br>
+<label>Car Name:</label>
+<input type="text" placeholder="Enter car name" name="cn" required><br>
+<label>Car Manufacturing Year:</label>
+<input type="number" placeholder="Enter manufacturing year" name="cy" required><br>
+<label>Car Price:</label>
+<input type="number" placeholder="Enter car price" name="cp" required><br>
+<label>Car Stock:</label>
+<input type="number" placeholder="Enter car stock" name="cs" required><br>
+<input type="submit" value="submit">
+</form>
+</body>
+<script>
+function myFun(){
+var p=document.f.cp.value;
+var s=document.f.cs.value;
+var k=document.f.cy.value;
+if(p<0){
+alert("Price cant be negative");
+return false;
+}
+else if(s<0){
+alert("Stock cant be negative");
+return false;
+}
+else if(k.size()<4 || k.size()>4){
+alert("Manufacturing year must be only 4 digits");
+return false;
+}
+return true;
+}
+</script>
+</html>

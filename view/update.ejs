@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>UPDATE DETAILS</title>
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+<center><h1>Car Inventory Management</h1></center>
+<ul class="m">
+<li><a href="/">Home</a></li>
+<li><a href="/add">Add New Car Details</a></li>
+<li><a href="/update">Update Car Details</a></li>
+<li><a href="/delete">Delete Car Details</a></li>
+<li><a href="/sales">Car Sales Details</a></li>
+<li><a href="/updatesales">Update Car Sales Details</a></li>
+</ul>
+<h2>Update Car Details</h2>
+<form name="f1" onsubmit="return fun()" method="post" action="/updateData">
+<label>Car Id:</label>
+<input type="text" placeholder="Enter car id" name="cid1" required><br>
+<label>Car Stock:</label>
+<input type="number" placeholder="Enter car stock" name="cs1" required><br>
+<input type="submit" value="update">
+</form>
+<script>
+function fun(){
+var s=document.f1.cs1.value;
+if(s<0){
+alert("Stock cant be negative");
+return false;
+}
+return true;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+<title>Car Inventory</title>
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+<center><h1>Car Inventory Management</h1></center>
+<ul class="m">
+<li><a href="/">Home</a></li>
+<li><a href="/add">Add New Car Details</a></li>
+<li><a href="/update">Update Car Details</a></li>
+<li><a href="/delete">Delete Car Details</a></li>
+<li><a href="/sales">Car Sales Details</a></li>
+<li><a href="/updatesales">Update Car Sales Details</a></li>
+</ul>
+<h2>Welcome</h2>
+<center>
+<table>
+<tr>
+<th>Car Id</th>
+<th>Car Brand</th>
+<th>Car Name</th>
+<th>Manufacturing Year</th>
+<th>Price</th>
+<th>Availability</th>
+</tr>
+<% for(var i=0;i<data.length;i++){%>
+<tr>
+<td><%= data[i].car_id%></td>
+<td><%= data[i].c_brand%></td>
+<td><%= data[i].c_name%></td>
+<td><%= data[i].yom%></td>
+<td><%= data[i].price%></td>
+<td><%= data[i].stock%></td>
+</tr>
+<% } %>
+</table>
+</center>
+</body>
+</html>
